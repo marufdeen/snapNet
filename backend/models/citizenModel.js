@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const patientSchema = new Schema(
+const citizenSchema = new Schema(
   { 
     name: String, 
     phoneNumber: String,  
@@ -15,4 +15,4 @@ const patientSchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Patient", patientSchema);
+module.exports = mongoose.model("Citizen", citizenSchema);

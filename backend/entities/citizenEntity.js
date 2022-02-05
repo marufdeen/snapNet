@@ -1,31 +1,31 @@
 const validate = require("../helpers/citizenValidator");
 
 class patient {
-  constructor(patientData) {
-    this.patientData = patientData;
+  constructor(citizenData) {
+    this.citizenData = citizenData;
   }
   
   getName() {
-    return this.patientData.name;
+    return this.citizenData.name;
   } 
 
   getAddress() {
-    return this.patientData.address;
+    return this.citizenData.address;
   }  
   getGender() {
-    return this.patientData.gender;
+    return this.citizenData.gender;
   }
   
   getPhoneNumber() {
-    return this.patientData.phoneNumber;
+    return this.citizenData.phoneNumber;
   } 
 
   getWard() {
-    return this.patientData.ward;
+    return this.citizenData.ward;
   } 
 
   async validateCitizenCreation() {
-    const { error } = await validate.validateCitizenCreation(this.patientData);
+    const { error } = await validate.validateCitizenCreation(this.citizenData);
     if (error) return error;
     return this;
   } 

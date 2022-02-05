@@ -17,7 +17,7 @@ class citizenService {
       const registeredBy = user.name; 
 
       // if patient does not exist, create the patient
-      const patientCreated = await citizenDao.create({ 
+      const citizenCreated = await citizenDao.create({ 
         name: entity.getName(),
         gender: entity.getGender(),  
         address: entity.getAddress(),   
@@ -26,8 +26,8 @@ class citizenService {
         registeredBy
       });
       // if user failed to create, throw error
-      if (!patientCreated) throw new Error("Patient not Created"); 
-      return { patientCreated };
+      if (!citizenCreated) throw new Error("Patient not Created"); 
+      return { citizenCreated };
     } catch (error) {
       return { error: error.message };
     }
