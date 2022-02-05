@@ -10,7 +10,7 @@ const patientSchema = new Schema(
       enum: ["male", "female", "others"],
     }, 
     registeredBy: String,
-    ward: { type: Schema.Types.ObjectId, ref: "Ward" },
+    ward: String,
   },
   { timestamps: true }
 );

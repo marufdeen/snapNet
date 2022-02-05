@@ -16,7 +16,7 @@ class patient {
     return this.patientData.gender;
   }
   
-  getPhone() {
+  getPhoneNumber() {
     return this.patientData.phoneNumber;
   } 
 

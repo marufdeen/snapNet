@@ -18,12 +18,10 @@ validators.validateCitizenCreation = (patientData) => {
     }), 
     address: Joi.string().required().messages({
       "any.required": "address field is required"
-      }),
-    dob:  Joi.date().max("now").required().messages({
-      "date.base": "Not a valid date format (YYYY-MM-DD)",
-      "any.required": "Date of birth is required",
-      "date.max":  "Date of birth must be less than or equal to today"
-    }),
+      }), 
+    ward: Joi.string().required().messages({
+      "any.required": "ward field is required"
+      }), 
     gender: Joi.string().required().valid('male', 'female', 'others').messages({
           "string.base": "gender with can only  be male, female, or others ",
           'any.required': 'gender field is required'
